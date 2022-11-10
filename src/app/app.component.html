@@ -1,33 +1,43 @@
 <div class="container-fluid py-3">
-  <h1>Angular Share Buttons</h1>
 
-  <share-buttons theme="circles-dark"
-    [include]="['copy', 'facebook', 'email', 'messenger', 'mix', 'line', 'linkedin', 'pinterest', 'print', 'reddit', 'sms', 'telegram', 'tumblr', 'twitter', 'viber', 'vk', 'xing', 'whatsapp']"
-    [showIcon]="true"
-    [showText]="false"
-    url="https://rodrigo.kamada.com.br/"
-    description="Angular Share Buttons"
-    twitterAccount="rodrigokamada"
-    class="pt-5">
-  </share-buttons>
+  <mat-form-field>
+    <mat-label>Region</mat-label>
+    <mat-select [(ngModel)]="regionSelected">
+      <mat-option *ngFor="let row of regionSelectionList" [value]="row">
+        {{row.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field><br>
+  <button mat-raised-button color="primary" (click)="setRegion()">Set Region</button>
+<!--  <h1>Angular Share Buttons ff</h1>-->
 
-  <share-buttons theme="modern-dark"
-    [include]="['copy', 'facebook', 'email', 'messenger', 'mix', 'line', 'linkedin', 'pinterest', 'print', 'reddit', 'sms', 'telegram', 'tumblr', 'twitter', 'viber', 'vk', 'xing', 'whatsapp']"
-    [showIcon]="true"
-    [showText]="true"
-    url="https://rodrigo.kamada.com.br/"
-    description="Angular Share Buttons"
-    twitterAccount="rodrigokamada"
-    class="pt-5">
-  </share-buttons>
+<!--  <share-buttons theme="circles-dark"-->
+<!--    [include]="['copy', 'facebook', 'email', 'messenger', 'mix', 'line', 'linkedin', 'pinterest', 'print', 'reddit', 'sms', 'telegram', 'tumblr', 'twitter', 'viber', 'vk', 'xing', 'whatsapp']"-->
+<!--    [showIcon]="true"-->
+<!--    [showText]="false"-->
+<!--    url="https://rodrigo.kamada.com.br/"-->
+<!--    description="Angular Share Buttons"-->
+<!--    twitterAccount="rodrigokamada"-->
+<!--    class="pt-5">-->
+<!--  </share-buttons>-->
 
-  <share-buttons theme="modern-dark"
-    [include]="['copy', 'facebook', 'email', 'messenger', 'mix', 'line', 'linkedin', 'pinterest', 'print', 'reddit', 'sms', 'telegram', 'tumblr', 'twitter', 'viber', 'vk', 'xing', 'whatsapp']"
-    [showIcon]="false"
-    [showText]="true"
-    url="https://rodrigo.kamada.com.br/"
-    description="Angular Share Buttons"
-    twitterAccount="rodrigokamada"
-    class="pt-5">
-  </share-buttons>
+<!--  <share-buttons theme="modern-dark"-->
+<!--    [include]="['copy', 'facebook', 'email', 'messenger', 'mix', 'line', 'linkedin', 'pinterest', 'print', 'reddit', 'sms', 'telegram', 'tumblr', 'twitter', 'viber', 'vk', 'xing', 'whatsapp']"-->
+<!--    [showIcon]="true"-->
+<!--    [showText]="true"-->
+<!--    url="https://rodrigo.kamada.com.br/"-->
+<!--    description="Angular Share Buttons"-->
+<!--    twitterAccount="rodrigokamada"-->
+<!--    class="pt-5">-->
+<!--  </share-buttons>-->
+
+<!--  <share-buttons theme="modern-dark"-->
+<!--    [include]="['copy', 'facebook', 'email', 'messenger', 'mix', 'line', 'linkedin', 'pinterest', 'print', 'reddit', 'sms', 'telegram', 'tumblr', 'twitter', 'viber', 'vk', 'xing', 'whatsapp']"-->
+<!--    [showIcon]="false"-->
+<!--    [showText]="true"-->
+<!--    url="https://rodrigo.kamada.com.br/"-->
+<!--    description="Angular Share Buttons"-->
+<!--    twitterAccount="rodrigokamada"-->
+<!--    class="pt-5">-->
+<!--  </share-buttons>-->
 </div>

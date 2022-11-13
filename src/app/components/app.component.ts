@@ -57,7 +57,6 @@ export class AppComponent {
             "prismId": 1583015
         }];
 
-
     constructor() {
         this.getValuesFromService();
         this.regionSelectionList = this.filterValues.map(lst => ({itemId: lst.itemId, name: lst.name}));

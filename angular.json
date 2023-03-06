@@ -108,11 +108,60 @@
             ],
             "scripts": []
           }
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "angular-sharebuttons:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "angular-sharebuttons:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false
+          }
+        },
+        "ct": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "angular-sharebuttons:serve",
+            "watch": true,
+            "headless": false,
+            "testingType": "component"
+          },
+          "configurations": {
+            "development": {
+              "devServerTarget": "angular-sharebuttons:serve:development"
+            }
+          }
+        },
+        "e2e": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "angular-sharebuttons:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "angular-sharebuttons:serve:production"
+            }
+          }
         }
       }
     }
   },
   "cli": {
-    "analytics": "6b1ad00d-0b9a-4d4d-a3f4-d6e28d7da59f"
+    "analytics": "6b1ad00d-0b9a-4d4d-a3f4-d6e28d7da59f",
+    "schematicCollections": [
+      "@cypress/schematic",
+      "@schematics/angular"
+    ]
   }
 }
